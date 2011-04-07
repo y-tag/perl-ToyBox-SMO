@@ -1,0 +1,34 @@
+NAME
+    ToyBox::SMO - Support Vector Machine with Sequential Minimal
+    Optimization
+
+SYNOPSIS
+      use ToyBox::SMO;
+
+      my $smo = ToyBox::SMO->new();
+  
+      $smo->add_instance(
+          attributes => {a => 2, b => 3},
+          label => 1 
+      );
+  
+      $smo->add_instance(
+          attributes => {c => 3, d => 1},
+          label => -1
+      );
+  
+      $smo->train();
+  
+      my $score = $smo->predict(
+                      attributes => {a => 1, b => 1, d => 1, e =>1}
+                  );
+
+DESCRIPTION
+AUTHOR
+    TAGAMI Yukihiro <tagami.yukihiro@gmail.com>
+
+LICENSE
+    This library is distributed under the term of the MIT license.
+
+    <http://opensource.org/licenses/mit-license.php>
+
